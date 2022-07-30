@@ -13,5 +13,22 @@ jobs:
       with:
         node-version: 16
     - name: install dependecies
-      run: npm install
+      run: npm ci
+    - name: Build
+      run: npm run build
+    - name: Setup Pages
+      uses: actions/configure-pages@v1
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+          # Upload entire repository
+        path: 'https://github.com/Elianhad/webTemplate1'
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@main
+
+
+
+
+
    
