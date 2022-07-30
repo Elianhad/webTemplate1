@@ -27,7 +27,8 @@ jobs:
       id: deployment
       uses: actions/deploy-pages@main
       with:
-        github_token: ${{ github.token }}
+        github_token: ${{ token }}
+        OVERRIDE_GH_PAGES_BRANCH: 'true'
 
 
 
