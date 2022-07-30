@@ -27,7 +27,7 @@ jobs:
       id: deployment
       uses: actions/deploy-pages@main
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ github.token }}
 
 
 
